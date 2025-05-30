@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:id="@+id/imageViewYemek"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/textViewYemekAdi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/buttonFavori"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewYemek"
+            tools:text="Yemek Adı Uzunsa Böyle" />
+
+        <TextView
+            android:id="@+id/textViewYemekFiyat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:textAppearance="?attr/textAppearanceBodySmall"
+            android:textColor="?attr/colorPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewYemekAdi"
+            tools:text="₺25.00" />
+
+        <ImageButton
+            android:id="@+id/buttonFavori"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_favorite_outline2"
+            android:tintMode="src_atop"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewYemek"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:contentDescription="Favorilere Ekle/Çıkar" />
+<!--        app:tint="@color/favorite_icon_tint"-->
+            
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/buttonHizliEkle"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:lottie_rawRes="@raw/quick_add_anim"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonFavori"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="4dp"
+            android:contentDescription="Hızlı Ekle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

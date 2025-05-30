@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/anasayfaFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.example.kotlinbitirmevolkanergunfoodorderingapp.ui.fragment.AnasayfaFragment"
+        android:label="Anasayfa"
+        tools:layout="@layout/fragment_anasayfa">
+        <action
+            android:id="@+id/action_anasayfaFragment_to_urunDetayFragment"
+            app:destination="@id/urunDetayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favorilerFragment"
+        android:name="com.example.kotlinbitirmevolkanergunfoodorderingapp.ui.fragment.FavorilerFragment"
+        android:label="Favoriler"
+        tools:layout="@layout/fragment_favoriler">
+        <action
+            android:id="@+id/action_favorilerFragment_to_urunDetayFragment"
+            app:destination="@id/urunDetayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sepetFragment"
+        android:name="com.example.kotlinbitirmevolkanergunfoodorderingapp.ui.fragment.SepetFragment"
+        android:label="Sepetim"
+        tools:layout="@layout/fragment_sepet" />
+    <fragment
+        android:id="@+id/hesabimFragment"
+        android:name="com.example.kotlinbitirmevolkanergunfoodorderingapp.ui.fragment.HesabimFragment"
+        android:label="Hesabım"
+        tools:layout="@layout/fragment_hesabim" />
+    <fragment
+        android:id="@+id/urunDetayFragment"
+        android:name="com.example.kotlinbitirmevolkanergunfoodorderingapp.ui.fragment.UrunDetayFragment"
+        android:label="Ürün Detayı"
+        tools:layout="@layout/fragment_urun_detay">
+        <argument
+            android:name="secilenYemek"
+            app:argType="com.example.kotlinbitirmevolkanergunfoodorderingapp.data.entity.Yemek" />
+    </fragment>
+</navigation>

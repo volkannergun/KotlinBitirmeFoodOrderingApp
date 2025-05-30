@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Yemek Sipariş</string>
+    <string name="anasayfa">Anasayfa</string>
+    <string name="favoriler">Favoriler</string>
+    <string name="sepetim">Sepetim</string>
+    <string name="hesabim">Hesabım</string>
+    <string name="urun_detayi">Ürün Detayı</string>
+    <string name="yemek_ara">Yemek ara...</string>
+    <string name="toplam_label">Toplam:</string>
+    <string name="sepeti_onayla">Sepeti Onayla</string>
+    <string name="sepete_ekle">Sepete Ekle</string>
+    <string name="henuz_favori_urun_yok">Henüz favori ürününüz yok.</string>
+    <string name="sepetiniz_su_anda_bos">Sepetiniz şu anda boş.</string>
+</resources>

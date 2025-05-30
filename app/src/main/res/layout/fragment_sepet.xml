@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.SepetFragment">
+
+    <ImageView
+        android:id="@+id/imageViewBackToHomeSepet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back_to_home"
+        android:padding="16dp"
+        app:tint="?attr/colorControlNormal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="Geri dön"/>
+
+    <TextView
+        android:id="@+id/textViewSepetTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sepetim"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        app:layout_constraintTop_toTopOf="@+id/imageViewBackToHomeSepet"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewBackToHomeSepet"
+        app:layout_constraintStart_toEndOf="@+id/imageViewBackToHomeSepet"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewSepet"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_sepet_yemek_card"
+        app:layout_constraintBottom_toTopOf="@+id/textViewSepetToplamLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewBackToHomeSepet" />
+        
+    <TextView
+        android:id="@+id/textViewSepetBos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sepetiniz şu anda boş."
+        android:textAppearance="?attr/textAppearanceBodyLarge"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ProgressBar
+        android:id="@+id/progressBarSepet"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/recyclerViewSepet"
+        app:layout_constraintEnd_toEndOf="@+id/recyclerViewSepet"
+        app:layout_constraintStart_toStartOf="@+id/recyclerViewSepet"
+        app:layout_constraintTop_toTopOf="@+id/recyclerViewSepet" />
+        
+    <TextView
+        android:id="@+id/textViewSepetToplamLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Toplam:"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSepetiOnayla"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewSepetToplamTutar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="₺138.00"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textStyle="bold"
+        android:textColor="?attr/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewSepetToplamLabel"
+        android:layout_marginEnd="16dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSepetiOnayla"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sepeti Onayla"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
