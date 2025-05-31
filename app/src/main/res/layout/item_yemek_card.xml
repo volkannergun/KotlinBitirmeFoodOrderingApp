@@ -33,6 +33,7 @@
             android:ellipsize="end"
             android:maxLines="1"
             android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/buttonFavori"
             app:layout_constraintStart_toStartOf="parent"
@@ -47,6 +48,7 @@
             android:layout_marginTop="4dp"
             android:textAppearance="?attr/textAppearanceBodySmall"
             android:textColor="?attr/colorPrimary"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewYemekAdi"
             tools:text="₺25.00" />
@@ -56,7 +58,7 @@
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_favorite_outline2"
+            android:src="@drawable/ic_favorite_outline"
             android:tintMode="src_atop"
 
             app:layout_constraintEnd_toEndOf="parent"
@@ -65,19 +67,19 @@
             android:layout_marginEnd="4dp"
             android:contentDescription="Favorilere Ekle/Çıkar" />
 <!--        app:tint="@color/favorite_icon_tint"-->
-            
+
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/buttonHizliEkle"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            app:lottie_rawRes="@raw/quick_add_anim"
-            app:lottie_autoPlay="false"
-            app:lottie_loop="false"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Hızlı Ekle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/buttonFavori"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="4dp"
-            android:contentDescription="Hızlı Ekle" />
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/quick_add_anim" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

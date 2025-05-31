@@ -23,11 +23,10 @@
         android:layout_height="wrap_content"
         android:text="Ürün Detayı"
         android:textAppearance="?attr/textAppearanceHeadline6"
-        app:layout_constraintTop_toTopOf="@+id/imageViewBackToHome"
         app:layout_constraintBottom_toBottomOf="@+id/imageViewBackToHome"
-        app:layout_constraintStart_toEndOf="@+id/imageViewBackToHome"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="16dp"/>
+        app:layout_constraintStart_toStartOf="@+id/imageViewBackToHome"
+        app:layout_constraintTop_toTopOf="@+id/imageViewBackToHome" />
 
     <ImageView
         android:id="@+id/imageViewUrun"
@@ -48,9 +47,10 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:textAppearance="?attr/textAppearanceHeadline5"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewUrunFavori"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewUrun"
-        app:layout_constraintEnd_toStartOf="@+id/imageViewUrunFavori"
         tools:text="Izgara Somon" />
 
     <TextView
@@ -61,24 +61,27 @@
         android:layout_marginTop="8dp"
         android:textAppearance="?attr/textAppearanceHeadline6"
         android:textColor="?attr/colorPrimary"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewUrunAdi"
         tools:text="₺55.00" />
 
+    <!--    app:tint="@color/favorite_icon_tint"-->
+
     <ImageButton
         android:id="@+id/imageViewUrunFavori"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:src="@drawable/ic_favorite_outline2"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="16dp"
         android:background="?attr/selectableItemBackgroundBorderless"
 
+        android:contentDescription="Favorilere ekle"
+        android:src="@drawable/ic_favorite_outline"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewUrunAdi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textViewUrunAdi"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewUrunAdi"
-        android:layout_marginEnd="16dp"
-        android:contentDescription="Favorilere ekle" />
-<!--    app:tint="@color/favorite_icon_tint"-->
-        
+        app:layout_constraintVertical_bias="0.225" />
+
     <LinearLayout
         android:id="@+id/layoutAdetSecimi"
         android:layout_width="wrap_content"
@@ -132,24 +135,25 @@
         android:id="@+id/textViewToplamUrunFiyati"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Toplam: ₺55.00"
+        android:layout_marginStart="16dp"
         android:textAppearance="?attr/textAppearanceHeadline6"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="@+id/buttonSepeteEkleLottie"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/buttonSepeteEkleLottie"
-        android:layout_marginStart="16dp"/>
-                
+        tools:text="Toplam: ₺55.00" />
+
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/buttonSepeteEkleLottie"
         android:layout_width="0dp"
-        android:layout_height="60dp"
-        app:lottie_rawRes="@raw/add_to_cart_anim"
-        app:lottie_autoPlay="false"
-        app:lottie_loop="false"
+        android:layout_height="120dp"
+        android:layout_margin="16dp"
+        android:contentDescription="Sepete Ekle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/textViewToplamUrunFiyati"
-        android:layout_margin="16dp"
-        android:contentDescription="Sepete Ekle" />
+        app:lottie_autoPlay="false"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/add_to_cart_anim" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

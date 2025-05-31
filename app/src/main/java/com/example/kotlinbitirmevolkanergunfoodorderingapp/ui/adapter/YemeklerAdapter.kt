@@ -59,7 +59,7 @@ class YemeklerAdapter(
                 .error(R.drawable.ic_placeholder_food) 
                 .into(binding.imageViewYemek)
 
-            val favoriIconRes = if (yemekUiModel.isFavori) R.drawable.ic_favorite_filled else R.drawable.ic_favorite_outline2
+            val favoriIconRes = if (yemekUiModel.isFavori) R.drawable.ic_favorite_filled else R.drawable.ic_favorite_outline
             binding.buttonFavori.setImageResource(favoriIconRes)
         }
     }

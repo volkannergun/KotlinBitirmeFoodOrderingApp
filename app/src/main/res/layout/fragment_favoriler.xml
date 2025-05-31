@@ -23,11 +23,10 @@
         android:layout_height="wrap_content"
         android:text="Favorilerim"
         android:textAppearance="?attr/textAppearanceHeadline6"
-        app:layout_constraintTop_toTopOf="@+id/imageViewBackToHomeFavoriler"
         app:layout_constraintBottom_toBottomOf="@+id/imageViewBackToHomeFavoriler"
-        app:layout_constraintStart_toEndOf="@+id/imageViewBackToHomeFavoriler"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="16dp"/>
+        app:layout_constraintStart_toStartOf="@+id/imageViewBackToHomeFavoriler"
+        app:layout_constraintTop_toTopOf="@+id/imageViewBackToHomeFavoriler" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewFavoriler"

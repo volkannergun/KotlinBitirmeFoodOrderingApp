@@ -23,11 +23,10 @@
         android:layout_height="wrap_content"
         android:text="Hesabım"
         android:textAppearance="?attr/textAppearanceHeadline6"
-        app:layout_constraintTop_toTopOf="@+id/imageViewBackToHomeHesabim"
         app:layout_constraintBottom_toBottomOf="@+id/imageViewBackToHomeHesabim"
-        app:layout_constraintStart_toEndOf="@+id/imageViewBackToHomeHesabim"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="16dp"/>
+        app:layout_constraintStart_toStartOf="@+id/imageViewBackToHomeHesabim"
+        app:layout_constraintTop_toTopOf="@+id/imageViewBackToHomeHesabim" />
 
     <ImageView
         android:id="@+id/imageViewUserProfile"

@@ -23,11 +23,10 @@
         android:layout_height="wrap_content"
         android:text="Sepetim"
         android:textAppearance="?attr/textAppearanceHeadline6"
-        app:layout_constraintTop_toTopOf="@+id/imageViewBackToHomeSepet"
         app:layout_constraintBottom_toBottomOf="@+id/imageViewBackToHomeSepet"
-        app:layout_constraintStart_toEndOf="@+id/imageViewBackToHomeSepet"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="16dp"/>
+        app:layout_constraintStart_toStartOf="@+id/imageViewBackToHomeSepet"
+        app:layout_constraintTop_toTopOf="@+id/imageViewBackToHomeSepet" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewSepet"
@@ -40,7 +39,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewBackToHomeSepet" />
-        
+
     <TextView
         android:id="@+id/textViewSepetBos"
         android:layout_width="wrap_content"

@@ -6,7 +6,7 @@
         android:title="Anasayfa" />
     <item
         android:id="@+id/favorilerFragment"
-        android:icon="@drawable/ic_favorite_outline2"
+        android:icon="@drawable/ic_favorite_outline"
         android:title="Favoriler" />
     <item
         android:id="@+id/sepetFragment"

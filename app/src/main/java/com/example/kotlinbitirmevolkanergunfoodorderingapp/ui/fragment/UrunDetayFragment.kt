@@ -71,7 +71,7 @@ class UrunDetayFragment : BaseFragment() {
         }
         
         viewModel.isFavori.observe(viewLifecycleOwner) { isFavori ->
-            val favoriIconRes = if (isFavori) R.drawable.ic_favorite_filled else R.drawable.ic_favorite_outline2
+            val favoriIconRes = if (isFavori) R.drawable.ic_favorite_filled else R.drawable.ic_favorite_outline
             binding.imageViewUrunFavori.setImageResource(favoriIconRes)
         }
 
