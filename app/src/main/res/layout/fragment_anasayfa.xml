@@ -15,23 +15,23 @@
         android:layout_marginEnd="16dp"
         android:background="@drawable/search_view_background"
         app:iconifiedByDefault="false"
-        app:queryHint="Yemek ara..."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-        
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:queryHint="Yemek ara..." />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewYemekler"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="3"
-        tools:listitem="@layout/item_yemek_card"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchViewYemek" />
+        app:layout_constraintTop_toBottomOf="@+id/searchViewYemek"
+        app:spanCount="3"
+        tools:listitem="@layout/item_yemek_card" />
 
     <ProgressBar
         android:id="@+id/progressBarAnasayfa"
@@ -41,6 +41,17 @@
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/bitelogotrans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

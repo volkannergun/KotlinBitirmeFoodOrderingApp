@@ -38,7 +38,7 @@
             app:layout_constraintEnd_toStartOf="@+id/buttonFavori"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageViewYemek"
-            tools:text="Yemek Adı Uzunsa Böyle" />
+            tools:text="Yemek Adı" />
 
         <TextView
             android:id="@+id/textViewYemekFiyat"
@@ -57,21 +57,21 @@
             android:id="@+id/buttonFavori"
             android:layout_width="36dp"
             android:layout_height="36dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_favorite_outline"
-            android:tintMode="src_atop"
-
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewYemek"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="4dp"
-            android:contentDescription="Favorilere Ekle/Çıkar" />
-<!--        app:tint="@color/favorite_icon_tint"-->
+            android:background="?attr/selectableItemBackgroundBorderless"
+
+            android:contentDescription="Favorilere Ekle/Çıkar"
+            android:src="@drawable/ic_favorite_outline"
+            android:tintMode="src_atop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewYemek" />
+        <!--        app:tint="@color/favorite_icon_tint"-->
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/buttonHizliEkle"
-            android:layout_width="41dp"
-            android:layout_height="41dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="8dp"
             android:contentDescription="Hızlı Ekle"
