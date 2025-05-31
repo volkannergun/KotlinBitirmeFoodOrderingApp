@@ -64,6 +64,7 @@
             android:contentDescription="Favorilere Ekle/Çıkar"
             android:src="@drawable/ic_favorite_outline"
             android:tintMode="src_atop"
+            app:tint="@color/favorite_icon_tint"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageViewYemek" />
         <!--        app:tint="@color/favorite_icon_tint"-->

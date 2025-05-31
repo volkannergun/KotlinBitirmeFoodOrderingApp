@@ -23,10 +23,11 @@
         android:layout_height="wrap_content"
         android:text="Sepetim"
         android:textAppearance="?attr/textAppearanceHeadline6"
+        app:layout_constraintTop_toTopOf="@+id/imageViewBackToHomeSepet"
         app:layout_constraintBottom_toBottomOf="@+id/imageViewBackToHomeSepet"
+        app:layout_constraintStart_toEndOf="@+id/imageViewBackToHomeSepet"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageViewBackToHomeSepet"
-        app:layout_constraintTop_toTopOf="@+id/imageViewBackToHomeSepet" />
+        android:layout_marginStart="16dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewSepet"
@@ -90,10 +91,11 @@
         android:id="@+id/buttonSepetiOnayla"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:text="Sepeti Onayla"
+        app:backgroundTint="@color/colorPrimaryVariant"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="16dp"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
